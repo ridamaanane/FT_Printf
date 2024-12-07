@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rmaanane <rmaanane@student.1337.ma>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/12/07 18:33:33 by rmaanane          #+#    #+#             */
+/*   Updated: 2024/12/07 18:33:36 by rmaanane         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
 int ft_check(va_list args, const char format)
@@ -37,6 +49,8 @@ int ft_printf(const char *format, ...)
 
 	i = 0;
 	count = 0;
+	if (!format)
+		return (-1);
     while (format[i] != '\0')
     {
         if (format[i] == '%' && format[i + 1] != '\0')
