@@ -8,11 +8,11 @@ int ft_adress(unsigned long nb)
     count = 0;
     
     if (nb == 0)
-        count += write (1, "(nil)", 5);
+        return (write (1, "(nil)", 5));
     base = "0123456789abcdef";
     if (nb >= 16)
     {
-        count += ft_putbase(nb / 16);
+        count += ft_adress(nb / 16);
         count += write (1, &base[nb % 16], 1);
     }
     else

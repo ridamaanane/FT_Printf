@@ -7,7 +7,7 @@ int ft_check(va_list args, const char format)
     count = 0;
     if (format == 'c')
         count += ft_putchar(va_arg(args , int));
-	if (format == 's')
+	else if (format == 's')
 		count += ft_putstr(va_arg(args, char *));
 	else if (format == 'd' || format == 'i')
 		count += ft_putnbr(va_arg(args, int));
@@ -31,14 +31,18 @@ int ft_check(va_list args, const char format)
 int ft_printf(const char *format, ...)
 {
     int i;
+	int count;
     va_list args;
     va_start(args , *format);
 
-    while (fromat[i] != '\0')
+	i = 0;
+	count = 0;
+    while (format[i] != '\0')
     {
         if (format[i] == '%' && format[i + 1] != '\0')
         {
             count += ft_check(args, format[i + 1]);
+			i++;
         }
         else
             count += ft_putchar(format[i]);
