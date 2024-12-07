@@ -1,4 +1,4 @@
-# ft_printf Project Overview
+# Ft_printf Project Overview
 
 ## Project Description
 The `ft_printf` project involves recreating the standard C `printf` function, providing a deep dive into variadic functions and their implementation.
