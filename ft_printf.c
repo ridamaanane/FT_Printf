@@ -4,7 +4,7 @@ int ft_check(va_list args, const char format)
 {
 	int count;
 
-	count = 0;
+	count = 0
 	if (format == 'c')
         count += ft_putchar(va_arg(args , int));
 	else if (format == 's')
