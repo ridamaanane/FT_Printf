@@ -2,10 +2,10 @@
 
 int ft_check(va_list args, const char format)
 {
-    int count;
+	int count;
 
-    count = 0;
-    if (format == 'c')
+	count = 0;
+	if (format == 'c')
         count += ft_putchar(va_arg(args , int));
 	else if (format == 's')
 		count += ft_putstr(va_arg(args, char *));
