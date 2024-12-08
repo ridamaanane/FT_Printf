@@ -16,7 +16,7 @@
 # include <stdarg.h>
 # include <unistd.h>
 
-int	ft_putchar(int c);
+int	ft_putchar(char c);
 int	ft_putstr(char *str);
 int	ft_adress(unsigned long nb);
 int	ft_ptrhandler(unsigned long nb);
