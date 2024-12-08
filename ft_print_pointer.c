@@ -32,11 +32,7 @@ int	ft_adress(unsigned long nb)
 	count = 0;
 	base = "0123456789abcdef";
 	if (nb >= 16)
-	{
 		count += ft_adress(nb / 16);
-		count += write(1, &base[nb % 16], 1);
-	}
-	else
-		count += write(1, &base[nb % 16], 1);
+	count += write(1, &base[nb % 16], 1);
 	return (count);
 }
