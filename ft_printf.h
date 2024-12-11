@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rmaanane <rmaanane@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/07 18:33:52 by rmaanane          #+#    #+#             */
-/*   Updated: 2024/12/07 18:33:54 by rmaanane         ###   ########.fr       */
+/*   Created: 2024/12/10 23:37:32 by rmaanane          #+#    #+#             */
+/*   Updated: 2024/12/10 23:41:53 by rmaanane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,11 @@
 
 int	ft_putchar(char c);
 int	ft_putstr(char *str);
-int	ft_adress(unsigned long nb);
-int	ft_ptrhandler(unsigned long nb);
-int	ft_unsigned(unsigned int nb);
+int	ft_putnbr(int n);
 int	ft_puthexa_l(unsigned long nb);
 int	ft_puthexa_u(unsigned long nb);
-int	ft_putnbr(int n);
-int	ft_check(va_list args, const char format);
+int	ft_unsigned(unsigned int nb);
+int	ft_ptrhandler(unsigned long nb);
 int	ft_printf(const char *format, ...);
 
 #endif

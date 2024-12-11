@@ -1,32 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_nbr.c                                     :+:      :+:    :+:   */
+/*   ft_putunsigned.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rmaanane <rmaanane@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/07 18:33:20 by rmaanane          #+#    #+#             */
-/*   Updated: 2024/12/07 18:33:21 by rmaanane         ###   ########.fr       */
+/*   Created: 2024/12/07 18:33:29 by rmaanane          #+#    #+#             */
+/*   Updated: 2024/12/10 23:39:19 by rmaanane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putnbr(int n)
+int	ft_unsigned(unsigned int nb)
 {
-	unsigned int	nb;
-	int				count;
+	int	count;
 
 	count = 0;
-	if (n < 0)
-	{
-		count += write(1, "-", 1);
-		nb = -n;
-	}
-	else
-		nb = n;
-	if (nb > 9)
-		count += ft_putnbr(nb / 10);
-	count += ft_putchar(nb % 10 + '0');
+	if (nb >= 10)
+		count += ft_unsigned(nb / 10);
+	count += ft_putchar((nb % 10) + '0');
 	return (count);
 }

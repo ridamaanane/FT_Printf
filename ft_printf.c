@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rmaanane <rmaanane@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/07 18:33:33 by rmaanane          #+#    #+#             */
-/*   Updated: 2024/12/07 18:33:36 by rmaanane         ###   ########.fr       */
+/*   Created: 2024/12/10 23:37:42 by rmaanane          #+#    #+#             */
+/*   Updated: 2024/12/11 14:16:21 by rmaanane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,7 @@ int	ft_check(va_list args, const char format)
 	else if (format == 'p')
 		count += ft_ptrhandler(va_arg(args, unsigned long));
 	else if (format == '%')
-		count += ft_putchar(format);
-	else
-		count += ft_putchar(format);
+		count += ft_putchar('%');
 	return (count);
 }
 
@@ -44,7 +42,7 @@ int	ft_printf(const char *format, ...)
 	int		count;
 	va_list	args;
 
-	va_start(args, *format);
+	va_start(args, format);
 	i = 0;
 	count = 0;
 	if (!format)

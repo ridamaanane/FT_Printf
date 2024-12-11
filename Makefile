@@ -1,7 +1,7 @@
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
-SRC = ft_print_char.c ft_print_string.c ft_print_pointer.c ft_print_nbr.c \
-	  ft_print_hexa_lower.c ft_print_hexa_upper.c ft_print_unsigned.c ft_printf.c	
+SRC = ft_printf.c ft_putchar.c ft_putstr.c ft_putnbr.c \
+	  ft_puthexa_l.c ft_puthexa_u.c ft_putunsigned.c ft_putaddress.c
 
 OBJ = $(SRC:%.c=%.o)
 NAME = libftprintf.a
@@ -10,10 +10,10 @@ RM = rm -f
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	@ar rsc $@ $?
+	@ar rcs $@ $?
 
 clean:
-	@$(RM) *.o
+	@$(RM) $(OBJ)
 
 fclean: clean
 	@$(RM) libftprintf.a
